@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+  <class name="com.rest.chat.entity.UserEntity" table="UserEntity">
+      <meta attribute="class-description">
+         This class contains the employee detail. 
+      </meta>
+      <id name="userId" type="long" column="userId">
+         
+      </id>
+      <property name="userName" column="userName" type="string"/>
+      <property name="email" column="email" type="string"/>
+      <property name="createdDate" column="createdDate" type="string"/>
+   </class>
+  
+    <class name="com.rest.chat.entity.Groupsmembers" table="Groupsmembers">
+      <meta attribute="class-description">
+         This class contains the employee detail. 
+      </meta>
+      <id name="groupName" type="string" column="groupName">
+         
+      </id>
+      <property name="guId" column="guId" type="string"/>
+      <property name="members" column="members" type="string"/>
+      
+   </class>
+ <class name="com.rest.chat.entity.MessageEntity" table="MessageDocument">
+      <meta attribute="class-description">
+         This class contains the Messages. 
+      </meta>
+      <id name="userId" type="int" column="fromuserid">
+         
+      </id>
+      <property name="groupName" column="groupName" type="string"/>
+      <property name="message" column="message" type="string"/>
+      <property name="stampTime" column="stamptime" type="string"/>
+      <property name="guid" column="guId" type="string"/>
+      <property name="sessionid" column="sessionId" type="int"/>
+   </class>
+</hibernate-mapping>

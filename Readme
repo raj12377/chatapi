@@ -1,0 +1,29 @@
+The following technologies are used to develop the application
+
+1. Spring
+2. Hibernate
+3. AWS RDS-MSQL
+4. JEtty server
+5. Maven
+
+Make sure that you have maven and jetty preinstalled to run this project. To run the project clone from the git repository and go to the application folder and use mvn jetty:run. Later use postman to look at the working of each endpoint.
+
+Basic Http authentication using spring is provided for logging.
+
+authentication details: uername:raj password:helloraj
+
+To run the end points, install Postman google chrome plugin as most of the methods use post request method and it can not be tested in the brwoser.
+
+End points working:
+
+1.  http://localhost:8080/restChatApplication/user/signup Enter the url at postman application and use the follwing data by selecting the content type as "application/json" {"userId" :45, "userName": "michael", "email" : "las@y.com"} this data will be stored in a data base in my AWS RDS instance. It works almost the same way for all the following endpoints
+
+2. http://localhost:8080/restChatApplication/chat/post - { "id":2,"messageContent":"Hey","sessionid":5,  "groupName" :"public","guId":"1c" } Posts the message
+
+3. http://localhost:8080/restChatApplication/user/list  gives the user list. This uses get method
+
+4. http://localhost:8080/restChatApplication/user/search search the user profile based on names. String is input 
+
+5.http://localhost:8080/restChatApplication/chat/create -  { "groupName": "lint","guId":"18",  "userId1":3,"userId2":2}
+
+6. http://localhost:8080/restChatApplication/message/search sting can be given which is taken as guid. All the messages with respect to that guid are returned

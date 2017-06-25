@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        
+        <property name="hibernate.dialect">
+      org.hibernate.dialect.MySQLDialect
+   </property>
+   <property name="hibernate.connection.driver_class">
+      com.mysql.jdbc.Driver
+   </property>
+
+   <!-- Assume test is the database name -->
+   <property name="hibernate.connection.url">
+      jdbc:mysql://cutemessaging.cn5rpp5fboex.us-east-1.rds.amazonaws.com:3306/tt
+   </property>
+   <property name="hibernate.connection.username">
+      Raj
+   </property>
+   <property name="hibernate.connection.password">
+      hiraj143
+   </property>  
+        
+        <mapping resource="UserDocument.hbm.xml"></mapping>
+        
+    </session-factory>
+</hibernate-configuration>

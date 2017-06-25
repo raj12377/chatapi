@@ -110,7 +110,7 @@ public class RestChatController {
       Transaction tx = null;
       try{
          tx = session.beginTransaction();
-         List<MessageEntity> messages =(List<MessageEntity>) session.createQuery("FROM MessageDocument where guId="+gid).list(); //"'"+
+         List<MessageEntity> messages =(List<MessageEntity>) session.createQuery("FROM MessageEntity where guId="+gid).list(); //"'"+
          for (Iterator iterator = 
                            messages.iterator(); iterator.hasNext();){
            MessageEntity m= (MessageEntity) iterator.next(); 
@@ -123,7 +123,7 @@ public class RestChatController {
       }finally {
          session.close(); 
       }
-      return "";
+      return response;
         }
 	@SuppressWarnings("static-access")
 	@RequestMapping(value = RestChatConstants.USER_SEARCH, method = RequestMethod.POST,produces="application/json")

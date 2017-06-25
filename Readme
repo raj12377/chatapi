@@ -26,4 +26,4 @@ End points working:
 
 5.http://localhost:8080/restChatApplication/chat/create -  { "groupName": "lint","guId":"18",  "userId1":3,"userId2":2}
 
-6. http://localhost:8080/restChatApplication/message/search sting can be given which is taken as guid. All the messages with respect to that guid are returned
+
